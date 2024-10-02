@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -30,14 +31,15 @@ nav {
     align-items: center;
     height: 75px;
     background-color: black;
-    position: relative;
+    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .center-text {
-    position: absolute;
-    left: 13%;
-    transform: translateX(-50%);
     color: #ffffff;
+    font-size: 1.5rem;
+    flex: 1;
+    text-align: center;
 }
 
 .right-text {
@@ -83,6 +85,35 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .center-text {
+        font-size: 1.2rem;
+    }
+
+    .right-text {
+        margin-right: 10px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .center-text {
+        font-size: 1rem;
+    }
+
+    .right-text {
+        padding: 5px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .right-text {
+        margin: 10px 0 0 0;
+    }
+}
+
+@media (max-width: 768px) {
     .card {
         flex: 1 1 calc(50% - 20px);
     }
@@ -91,5 +122,9 @@ footer {
 @media (max-width: 480px) {
     .card {
         flex: 1 1 100%;
+    }
+
+    .container-wrapper {
+        margin: 10px;
     }
 }
